@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/addtask.css">
+    <link rel="stylesheet" href="./css/media_queries.css">
+
+    <script src="./js/main.js"></script>
+    <script src="./js/remotestorage.js"></script>
+    <script src="./js/tasktemplate.js"></script>
+    <script src="./js/addtask.js"></script>
+    <script src="./js/dropdown.js"></script>
+    <title>Join - Board</title>
+</head>
+
+<body onload="initAddtaskSite()" class="custom-scrollbar">
+    <div onclick="closeHeaderMenu()" w3-include-html="./templates/sidebar.html"></div>
+    <div onclick="closeHeaderMenu()" class="header-main-container">
+        <header w3-include-html="./templates/header.html"></header>
+        <div class="addtask_maindiv">
+            <div w3-include-html="./templates/addtask-template.html"></div>
+        </div>
+    </div>
+
+    <!-- preload images to prevent flickering  -->
+    <div style="display: none;">
+        <img src="./img/icons/add-task/cancel-high.svg" height="0" width="0">
+        <img src="./img/icons/add-task/cancel-activ.svg" height="0" width="0">
+        <img src="./img/icons/add-task/cf-checked-white.svg" height="0" width="0">
+        <img src="./img/icons/add-task/Prio-urgent-white.svg" height="0" width="0">
+        <img src="./img/icons/add-task/Prio-medium-white.svg" height="0" width="0">
+        <img src="./img/icons/add-task/Prio-low-white.svg" height="0" width="0">
+    </div>
+
+</body>
+
+</html>

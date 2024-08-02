@@ -1,0 +1,15 @@
+<span class="header-kanbanboard-headline">Kanban Project Management Tool</span>
+<img class="header-logo" src="././img/logo/logo.png" alt="join-logo">
+<div class="header-help-user-container">
+    <a class="header-help-link" href="././help.html">
+        <img src="./img/icons/header/help.svg" alt="Help">
+    </a>
+    <div id="current_user_badge" class="header-user-bg" onclick="toggleHeaderMenu(); event.stopPropagation();">
+        <span id="currentuser-initial" class="header-user"></span>
+    </div>
+</div>
+<div onclick="event.stopPropagation()" id="headerMenu" class="header-menu-container">
+    <a class="header-menu-link" href="././legal_notice.html">Legal Notice</a>
+    <a class="header-menu-link" href="././privacy_policy.html">Privacy Policy</a>
+    <a class="header-menu-link" href="javascript:logOut();">Log out</a>
+</div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo/favicon.png" type="image/x-icon">
+    <title>Join - Contacts</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/media_queries.css">
+</head>
+
+<body onload="initContactsSite()" class="custom-scrollbar">
+    <div onclick="closeHeaderMenu()" w3-include-html="./templates/sidebar.html"></div>
+    <!--Add new contact window//Start-->
+    <section onclick="closeAddEditWindow()" id="addEditContactContainer" class="hide">
+        <div onclick="event.stopPropagation()" id="addEditContact" class="add-edit-contact">
+            <div class="add-edit-contact-left">
+                <img src="./img/logo/join-small.png" alt="join-logo">
+                <h2>Add contact</h2>
+                <span>Tasks are better with a team!</span>
+                <div></div>
+            </div>
+            <div class="add-edit-contact-middle">
+                <div>
+                    <img src="./img/icons/contacts/profile.svg" alt="user">
+                </div>
+            </div>
+            <div class="add-edit-contact-right">
+                <div onclick="closeAddEditWindow()">
+                    <img src="./img/icons/contacts/cancel.svg" alt="exit">
+                </div>
+                <form onsubmit="createContact(); return false;">
+                    <div class="input-container">
+                        <input placeholder="Name" class="input-class name-input" type="text" required>
+                        <input placeholder="Email" class="input-class email-input" type="email" required>
+                        <input placeholder="Phone (12 Digits)" class="input-class phone-input" type="tel" pattern="[0-9]{12}" minlength="12" maxlength="12" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="button" class="cancel-button">
+                            <span>Cancel</span>
+                            <img src="./img/icons/contacts/cancel.svg" alt="cancel">
+                        </button>
+                        <button type="submit" class="create-button">
+                            <span>Create Contact</span>
+                            <img src="./img/icons/contacts/check-white.svg" alt="check">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--Add new contact window//End-->
+    <!--Delete contact window//Start-->
+    <section onclick="closeDeleteProofWindow()" id="deleteProofWindow" class="hide">
+        <div onclick="event.stopPropagation()" id="deleteContactProof" class="delete-contact-proof-window">
+            <div class="delete-question-container">
+                <span class="delete-question">Are you sure you want to delete this contact permanently?</span>
+            </div>
+            <div class="delete-button-container">
+                <button type="button" class="cancel-button cancel-delete">
+                    <span>Cancel</span>
+                    <img src="./img/icons/contacts/cancel.svg" alt="cancel">
+                </button>
+                <button type="button" class="create-button yes-delete">
+                    <span>Yes</span>
+                    <img src="./img/icons/contacts/check-white.svg" alt="check">
+                </button>
+            </div>
+        </div>
+    </section>
+    <!--Delete contact window//End-->
+    <div onclick="closeHeaderMenu()" class="header-main-container">
+        <header w3-include-html="./templates/header.html"></header>
+        <main>
+            <section id="contactSection" class="contact-container custom-scrollbar">
+                <div class="add-button-container">
+                    <button onclick="showAddToContactWindow()" class="add-contact-btn">
+                        <span>Add new contact</span>
+                        <img src="./img/icons/contacts/add_contact-white.svg" alt="">
+                    </button>
+                </div>
+                <div id="contactsContainer" class="main-contacts-container">
+
+                </div>
+            </section>
+            <section onclick="closeMobileMenu()" id="showContactSection" class="show-contact-container">
+                <div class="headline-container">
+                    <h1 class="headline-contact">Contacts</h1>
+                    <div>
+                        <div class="headline-seperator"></div>
+                        <span class="subheadline-contact">Better with a team</span>
+                    </div>
+                </div>
+                <div id="showUserEntry">
+
+                </div>
+                <!--Created Contact MSG//Start-->
+                <section>
+                    <div id="createdMsg" class="created-msg-bg">
+                        <span class="created-msg-text">Contact successfully created</span>
+                    </div>
+                </section>
+                <!--Created Contact MSG//End-->
+            </section>
+        </main>
+    </div>
+    <script src="./js/remotestorage.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/contacts_template.js"></script>
+    <script src="./js/contacts.js"></script>
+</body>
+
+</html>

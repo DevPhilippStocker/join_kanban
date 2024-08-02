@@ -1,0 +1,109 @@
+@media (max-width: 850px) {
+    /********** HEADER **********/
+
+    .header-help-link {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding-bottom: 74px;
+    }
+
+    .header-main-container {
+        width: 100%;
+    }
+
+    nav {
+        width: auto;
+        height: auto;
+        position: relative;
+        z-index: 20;
+    }
+
+    .nav_elements {
+        background-color: #2A3647;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        gap: 0;
+    }
+
+    .nav_list_element {
+        border-radius: 16px;
+        width: 80px;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .nav_list_element span {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0;
+    }
+
+    .nav_list_element img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .navbar_logo,
+    .nav_security_links {
+        display: none;
+    }
+
+    .header-kanbanboard-headline {
+        margin-left: 16px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    /********** HEADER **********/
+
+    header {
+        position: sticky;
+        top: 0;
+        height: 80px;
+        min-height: 80px;
+    }
+
+    .header-logo {
+        display: block;
+    }
+
+    .header-kanbanboard-headline {
+        display: none;
+    }
+
+    .header-help-user-container {
+        margin-right: 16px;
+    }
+
+    .header-menu-container {
+        right: 12px;
+        top: 80px;
+    }
+
+    .header-user-bg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-user {
+        font-size: 16px;
+    }
+}
